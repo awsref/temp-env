@@ -16,3 +16,4 @@ jobs:
       - run: |
           echo ${{ inputs.environment }}
           echo ${{ secrets.TEST }}
+          echo ${{ vars.VAR1 }}
