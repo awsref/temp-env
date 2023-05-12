@@ -14,4 +14,4 @@ jobs:
     environment: ${{ inputs.environment }}
     steps:
       - run: |
-          echo ${{ secret.TEST }}
+          echo ${{ inputs.environment }}
