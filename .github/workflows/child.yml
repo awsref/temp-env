@@ -1,0 +1,15 @@
+name: child workflow
+
+on:
+  pull_request:
+    branches:
+      - main
+      
+jobs:
+  reusable_workflow_job:
+    name: echo
+    runs-on: ubuntu-latest
+    environment: dev
+    steps:
+      - run: |
+          echo ${{ secrets.TEST }}
