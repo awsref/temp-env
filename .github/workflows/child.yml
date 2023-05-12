@@ -13,6 +13,7 @@ jobs:
       environment: pr
     secrets: inherit
   deploy-dev-with-approval:
+    needs: deploy-pr
     name: dev_echo
     uses: ./.github/workflows/base.yml
     with:
