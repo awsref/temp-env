@@ -17,3 +17,4 @@ jobs:
           echo ${{ inputs.environment }}
           echo ${{ secrets.TEST }}
           echo ${{ vars.VAR1 }}
+          echo '### Hello world! 🚀' >> $GITHUB_STEP_SUMMARY
