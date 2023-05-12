@@ -7,9 +7,8 @@ on:
       
 jobs:
   reusable_workflow_job:
-    name: echo
-    runs-on: ubuntu-latest
-    environment: dev
-    steps:
-      - run: |
-          echo ${{ secrets.TEST }}
+    name: dev_echo
+    uses: ./.github/workflows/base.yml
+    with:
+      environment: dev
+    secrets: inherit
