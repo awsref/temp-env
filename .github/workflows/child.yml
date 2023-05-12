@@ -5,8 +5,14 @@ on:
     branches:
       - main
       
-jobs:
-  reusable_workflow_job:
+jobs:  
+  deploy-pr:
+    name: pr_echo
+    uses: ./.github/workflows/base.yml
+    with:
+      environment: pr
+    secrets: inherit
+  deploy-dev-with-approval:
     name: dev_echo
     uses: ./.github/workflows/base.yml
     with:
