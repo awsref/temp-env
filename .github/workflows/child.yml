@@ -34,9 +34,7 @@ jobs:
       environment: qa
     secrets: inherit
   deploy-prd:
-    needs: 
-      - deploy-stg
-      - deploy-qa
+    needs: deploy-stg
     name: prd_echo
     uses: ./.github/workflows/base.yml
     with:
